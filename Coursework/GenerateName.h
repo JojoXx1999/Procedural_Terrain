@@ -11,53 +11,53 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------//
 //------------------------------------------------------------Generate Name Class------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------------------------//
-class GenerateName																															 //
-{																																			 //  
+class GenerateName																															 
+{																																			   
 //-------------------------------------------------------------------------------------------------------------------------------------------//
 //--------------------------------------------------------------Public Functions-------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------------------------//
-public:																																		 //
+public:																																		 
 	GenerateName();																	//Constructor function ----------------------------------//
 	~GenerateName();																//Destructor function  ----------------------------------//
 	void AddGeo(int ft);															//Add geometry to name ----------------------------------//
 	void AddDes(float clim);														//Add description      ----------------------------------//
 	void MakeName();																//Set up name base     ----------------------------------//
-	inline std::string getName() { return name; }										//Name getter          ----------------------------------//
+	inline std::string getName() { return name; }							
 	void Reset();																	//Reset name generator ----------------------------------//
 	void ChangeName(float climate, int ft);											//Change the name      ----------------------------------//
-																					//
+																					
 //-------------------------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------------------------//
-																					//
+																					
 //-------------------------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------------Private Functions-------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------------------------//
-private:																																	 //
+private:																																	 
 	std::string descriptor[11] = { "Black ", "Old ", "East ", "West ", "South ", "North ", "Crooked ",		    //Descriptor options array --//
-		"New ", "Treacherous ", "Saint ", "Stormy " };															 //
+		"New ", "Treacherous ", "Saint ", "Stormy " };															 
 	std::string coldDescriptor[4] = { "Cold ", "Icy ", "Snowy ", "White " };									//Cold descriptor array -----//
-																												//
+																												
 	std::string prefix[23] = { "Aber", "Avon", "Druin", "Ard", "Ash", "Ast", "Auch", "Auchter", "Blen", "Brad", //Prefix Options array ------//
-		"Bre", "Craig", "Drum", "Dun", "Fin", "Inver", "Kin", "Kirk", "Lang", "Strath",								 //
-		"For", "Win", "Kirri" };																						 //
-																														 //
+		"Bre", "Craig", "Drum", "Dun", "Fin", "Inver", "Kin", "Kirk", "Lang", "Strath",								 
+		"For", "Win", "Kirri" };																						 
+																														 
 	std::string suffix[29] = { "side",   "ock", "y", "ard", "berry", "berg", "burgh", "by", "chester", "cott",  //Suffix Options array ------//
-		"dale", "den", "dee", "ford", "foss", "ham", "tay", "hope", "ing", "keld", "allen",							 //
-		"mouth", "more", "ness", "pool", "far", "thorpe", "ton", "muir" };											 //
-																													 //
+		"dale", "den", "dee", "ford", "foss", "ham", "tay", "hope", "ing", "keld", "allen",							 
+		"mouth", "more", "ness", "pool", "far", "thorpe", "ton", "muir" };											 
+																													 
 	std::string middle[10] = { "i", "a", "wick", "ton", "tho", "stow", "crop", "er", "loch", "law" };			//Middle Options array ------//
 																												//
 	std::string geometry[12] = { " Range", " Quarry", " Path", " Cross", " Crossing", " Cliff", " Park",		//Geometry Options array ----//
-		" Rock", " Plateau", " Valley", " Dip", " Hill" };															 //
+		" Rock", " Plateau", " Valley", " Dip", " Hill" };															 
 	std::string highGeometry[4] = { " Mountain", " Peak", " Summit", " Munro" };					         	//High Geometry Options -----//
-																												//
-private:																																	 //
+																												
+private:																																	 
 	std::string name = "";															//String to store the generated name --------------------//
 	std::string currentDes = "";													//String to store the current generated description -----//
 	int des;																		//Integer to locate position in the array ---------------//
 	int size = 0;																	//Size to store the current length of the name ----------//
 	bool check = false, addedDes = false, addedDes2 = false;						//Booleans for checks to create sensible name  ----------//
-};																																			 //
+};																																			 
 //-------------------------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------------------End---------------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------------------------//
